@@ -1,53 +1,47 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
+import React from 'react';
+import {FlatList, StyleSheet, Text, View } from 'react-native';
 
- import React, { Component } from 'react';
- import {
-   AppRegistry,
-   StyleSheet,
-   Text,
-   View
- } from 'react-native';
+
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop :2
+  },
  
- export default class wastenot extends Component {
-   render() {
-     return (
-       <View style={styles.container}>
-         <Text style={styles.welcome}>
-           Welcome to React Native!
-         </Text>
-         <Text style={styles.instructions}>
-           To get started, edit index.android.js
-         </Text>
-         <Text style={styles.instructions}>
-           Double tap R on your keyboard to reload,{'\n'}
-           Shake or press menu button for dev menu
-         </Text>
-       </View>
-     );
-   }
- }
  
- const styles = StyleSheet.create({
-   container: {
-     flex: 1,
-     justifyContent: 'center',
-     alignItems: 'center',
-     backgroundColor: '#F5FCFF',
-   },
-   welcome: {
-     fontSize: 20,
-     textAlign: 'center',
-     margin: 10,
-   },
-   instructions: {
-     textAlign: 'center',
-     color: '#333333',
-     marginBottom: 5,
-   },
- });
- 
- AppRegistry.registerComponent('wastenot', () => wastenot);
+  item: {
+    padding:20,
+    fontSize:18,
+    height:44,
+  },
+
+});
+
+const FlatListBasics = () => {
+  return (
+
+    <View style={styles.container}>
+      {/* sd*/}
+      <FlatList
+       data={[
+         {key:'OUSL1'},
+         {key:'OUSL2'},
+         {key:'OUSadL3'},
+         {key:'OUSL4'},
+         {key:'OUSL5'},
+         {key:'OUSL6'},
+         {key:'OUSL7'},
+         {key:'OUSL8'},
+         
+        ]}
+        renderItem={ ({item}) => <Text styles={styles.item}>{item.key}</Text>}
+       
+        
+        
+      />
+      </View>
+  );
+}
+
+export default FlatListBasics;
