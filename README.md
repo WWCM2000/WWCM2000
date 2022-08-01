@@ -1,6 +1,6 @@
 - 👋 Hi, I’m Chanaka Madhuranga
 - 👀 I’m interested in Programming and Designing
-- 🌱 I’m currently learning Vue and Java
+- 🌱 I’m undergraduate student in OUSL
 
 
 <!---
